@@ -4,15 +4,15 @@ import "./Home.css";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate();
-  
+  const navigate = useNavigate(); //provides a function to navigate to different routes 
+
   useEffect(() => {
     fetchUsers();
   }, []);
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch("https://reqres.in/api/users?page=2");
+      const response = await fetch("https://reqres.in/api/users?page=2"); //asynchronous function that fetches the list of users 
       const data = await response.json();
       setUsers(data.data);
     } catch (error) {

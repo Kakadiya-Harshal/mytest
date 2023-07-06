@@ -26,42 +26,43 @@ const UserDetails = () => {
     const userElement = userRef.current;
     const width = userElement.offsetWidth;
     const height = userElement.offsetHeight;
-
+  
     const canvas = document.createElement("canvas");
-    canvas.width = width;
-    canvas.height = height;
-
+    canvas.width = width * 2; // Adjust canvas width
+    canvas.height = height * 2; // Adjust canvas height
+  
     const context = canvas.getContext("2d");
     context.fillStyle = "#fff"; // Set background color if needed
-    context.fillRect(0, 0, width, height);
-
+    context.fillRect(0, 0, width * 2, height * 2); // Adjust fillRect dimensions
+  
     const name = userElement.querySelector("h3").textContent;
     const email = userElement.querySelector("p").textContent;
-
+  
     const dataURL = userElement.querySelector("img").src;
-
+  
     const image = new Image();
     image.crossOrigin = "Anonymous";
-
+  
     image.onload = () => {
-      context.drawImage(image, 2 * height, 0, height, height);
-
+      context.drawImage(image, height * 2, 0, height * 2, height * 2); // Adjust drawImage dimensions
+  
       context.font = "16px Arial";
       context.fillStyle = "#000";
       context.fillText(name, 10, 20);
       context.fillText(email, 10, 40);
-
+  
       const link = document.createElement("a");
       link.href = canvas.toDataURL("image/png");
       link.download = "user_details.png";
       link.click();
     };
-
+  
     image.src = dataURL;
   };
+  
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <div>It's Loading... please wait</div>;
   }
 
   return (
