@@ -1,0 +1,63 @@
+.user-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: #293462;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .user-card:hover {
+    background-color: #5c6ac4;
+    color: white;
+  }
+  
+  .user-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: height 0.3s;
+  }
+  
+  .user-card:hover img {
+    height: 150px;
+  }
+  
+  .user-card .user-details {
+    text-align: center;
+  }
+  
+  .user-card h1 {
+    margin-bottom: 0;
+  }
+  
+  .user-card h3 {
+    margin-top: 0;
+  }
+  
+  .user-card p {
+    margin-bottom: 0;
+  }
+  
+  .download-btn {
+    padding: 10px 20px;
+    background-color: #293462;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .download-btn:hover {
+    background-color: #5c6ac4;
+  }
+  

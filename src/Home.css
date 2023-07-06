@@ -1,0 +1,33 @@
+.main-div {
+  display: flex;
+  flex-direction: column; /* Change flex-direction to column */
+  gap: 20px;
+}
+
+.sub-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #293462; /* Change background color to your desired color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition effect for hovering */
+}
+
+.sub-div:hover {
+  background-color: #5c6ac4; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+.img-div {
+  width: 100%; /* Set width to 100% to make it vertical */
+  transition: height 0.3s; /* Add transition effect for image height */
+}
+
+.sub-div:hover .img-div {
+  height: 150px; /* Increase image height on hover */
+}
+
+.details-div {
+  width: 100%; /* Set width to 100% to make it vertical */
+}
