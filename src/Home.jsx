@@ -5,6 +5,7 @@ import "./Home.css";
 const Home = () => {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
+  
   useEffect(() => {
     fetchUsers();
   }, []);
